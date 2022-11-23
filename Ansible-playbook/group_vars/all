@@ -1,0 +1,18 @@
+php_version: 8.0
+username: ubuntu
+vhost_name: node1
+server_document_root: "/var/www/html"
+
+
+
+# Variables for Role Certbot certs.
+certbot_create_if_missing: false
+certbot_create_method: standalone
+certbot_admin_email: devops4solutions@gmail.com
+
+certbot_create_standalone_stop_services:
+  - apache2
+
+apache_vhosts:
+  - {servername: "35.170.74.105", serveralias: "abiola-book.me", documentroot: "/var/www/html/node1/public"}
+

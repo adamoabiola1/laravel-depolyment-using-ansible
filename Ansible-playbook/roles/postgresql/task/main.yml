@@ -1,0 +1,5 @@
+ - name: copy bash script to location
+   template: src=bash.sh dest="/var/www/html/{{ server_name}}/bashscript.sh"
+      
+- name: run bash script
+  shell: sh /var/www/html/{{ server_name }}/bashscript.sh -y
